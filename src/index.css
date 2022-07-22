@@ -1,13 +1,287 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
 }
+
+.bg-img{
+  display: flex;
+  align-items: center;
+  background-image: url('./image/sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  
+}
+
+.bg-dark{
+  display: flex;
+  align-items: center;
+  background-image: url('./image/darkSky.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  max-width: 600px;
+  min-width: 600px;
+  margin: 0px auto;
+  overflow: auto;
+  min-height: 200px;
+  max-height: 600px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url('./image/white.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.container-dark {
+  max-width: 600px;
+  min-width: 600px;
+  margin: 0px auto;
+  overflow: auto;
+  min-height: 200px;
+  max-height: 600px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url('./image/skynight.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  }
+
+  /* toggle */
+
+  .toggle-container{
+    display: flex;
+    align-items: center;
+  }
+
+  .togglebar{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background:#000000;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(255, 250, 250, 0.974);
+    transition: 0.5s;
+    
+  }
+
+  .togglebar:checked{
+    
+    background:#f4f4f4;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  }
+
+  .togglebar::before{
+
+    content: ' ';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 0;
+    left: 40px;
+    background: maroon;
+    transform: scale(1.1);
+    transition: 0.5s;
+
+
+  }
+
+  .togglebar:checked:before{
+    left: 0px;
+  }
+
+  /* ------------- */
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000000;
+  
+}
+
+.header-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  
+}
+
+.task.reminder {
+  border-left: 10px solid rgb(0, 90, 128);
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4f4f4;
+}
+
+.task p{
+  background-color: #f4f4f4;
+}
+
+.trash{
+  background-color: #f4f4f4;
+}
+
+.trash:hover{
+  color: red;
+  background-color: #f4f4f4;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+.form-control-dark {
+  margin: 20px 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+.form-control label {
+  display: block;
+}
+
+.form-control-dark label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  background-color: #f4f4f4;
+}
+
+.form-control-dark input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  background-color: #f4f4f4;
+}
+
+.reminder-div{
+  width: 150px;
+  display: flex;
+  height: 20px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.white-label{
+  font-weight: bold;
+  color: #f4f4f4;
+  
+}
+.dark-label{
+  font-weight: bold;
+  color: #000000;
+}
+
+.reminder-div input{
+  margin-left: 20px;
+}
+
+
+
+
+.noTask{
+  color: #000000;
+}
+
+.noTask-dark{
+  color: #ffffff;
+}
+
+.footer-light{
+  margin-top: 30px;
+  text-align: center;
+  color: #000000;
+}
+
+
+
+.footer-dark{
+  margin-top: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+
