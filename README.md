@@ -1,2 +1,2 @@
-# To do list app
+# a simple todo app using reactjs
 
